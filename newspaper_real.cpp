@@ -1,7 +1,7 @@
 
 #include "newspaper_real.h"
 #include "ad.h"
-#include "common.h"
+#include "remove_element.h"
 #include <string>
 
 void NewspaperReal::PlaceAd(Ad * ad)

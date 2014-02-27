@@ -1,6 +1,6 @@
 
 #include "ad_real.h"
-#include "common.h"
+#include "remove_element.h"
 
 void AdReal::RegisterPlacement(const Newspaper * newspaper)
 {

@@ -38,10 +38,10 @@ clean:
 # ad
 # 
 ################################################################################
-ad.o: ad.h ad_real.h ad_real.cpp common.h
+ad.o: ad.h ad_real.h ad_real.cpp remove_element.h
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ad_real.cpp -o $@
 
-ad_tests.o: ad_tests.cpp ad.h ad_real.h common.h $(GTEST_HEADERS)
+ad_tests.o: ad_tests.cpp ad.h ad_real.h remove_element.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c ad_tests.cpp
 
 AD_TEST_DEPENDENCIES=ad_tests.o ad.o gtest_main.a
@@ -54,10 +54,10 @@ ad_tests: $(AD_TEST_DEPENDENCIES)
 # newspaper
 # 
 ################################################################################
-newspaper.o: newspaper.h newspaper_real.h newspaper_real.cpp ad.h common.h
+newspaper.o: newspaper.h newspaper_real.h newspaper_real.cpp ad.h remove_element.h
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c newspaper_real.cpp -o $@
 
-newspaper_tests.o: newspaper_tests.cpp newspaper.h newspaper_real.h ad.h common.h $(GTEST_HEADERS)
+newspaper_tests.o: newspaper_tests.cpp newspaper.h newspaper_real.h ad.h remove_element.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c newspaper_tests.cpp
 
 NEWSPAPER_TEST_DEPENDENCIES=newspaper_tests.o newspaper.o gtest_main.a
